@@ -12,27 +12,24 @@
         <div class="alert alert-danger">{{ session('error') }}</div>
     @endif
 
-    <h1 class="text-center">Welcome</h1>
+    <h1 class="text-start">Sign In</h1>
 
     <form action="{{'/login'}}" method="POST">
         {{csrf_field()}}
 
-        <div class="form-group mb-3">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" class="form-control">
+        <div class="form-group mb-3 mt-4">
+            <input type="email" name="email" id="email" class="form-control" placeholder="Email or phone number" style="width: 350px; height: 45px;">
         </div>
 
         <div class="form-group mb-3">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" class="form-control">
+            <input type="password" name="password" id="password" class="form-control" placeholder="Password" style="width: 350px; height: 45px;">
         </div>
 
-        <div class="d-flex">
-            <div class="flex-grow-1">
-                <a href="{{'/register'}}">Sign up for an account</a>
+            <button class="btn btn-danger px-5" type="submit" style="width: 350px; height: 45px; margin-top:15px; background-color: red">Sign in</button>
+
+            <div class="flex-grow-1 mt-5">
+                <a href="{{'/register'}}" style="color: gray; text-decoration: none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">Sign up now.</a>
             </div>
-            <button class="btn btn-primary px-5" type="submit">Login</button>
-        </div>
 
         @method('POST')
     </form>
