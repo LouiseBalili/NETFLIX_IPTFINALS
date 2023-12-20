@@ -5,13 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Phone extends Model
+class TVShowRequest extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'phone_name',
-        'brand',
-        'price',
+        'title',
+        'year_released',
     ];
 }

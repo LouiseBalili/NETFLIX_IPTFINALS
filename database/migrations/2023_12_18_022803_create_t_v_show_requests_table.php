@@ -11,11 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('phones', function (Blueprint $table) {
+        Schema::create('t_v_show_requests', function (Blueprint $table) {
             $table->id();
-            $table->string('phone_name');
-            $table->string('brand');
-            $table->decimal('price', 8, 2);
+            $table->string('title');
+            $table->integer('year_released');
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('phones');
+        Schema::dropIfExists('t_v_show_requests');
     }
 };

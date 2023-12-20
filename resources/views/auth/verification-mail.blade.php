@@ -1,5 +1,5 @@
 <p>Welcome {{ $user->name }}</p>
-<p>You received this email as aresult of your registration to our website</p>
+<p>You received this email as a result of your registration to our website</p>
 <p>Please click on the verification link to verify your account.</p>
 
 <p>

@@ -7,19 +7,25 @@
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex ms-2">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/logs">Logs</a>
+                <a class="nav-link active" aria-current="page" href="/dashboard">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/phones">Phones</a>
+                <a class="nav-link active" aria-current="page" href="/tvshows">TV Shows</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/movies">Movies</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/logs">Requests</a>
             </li>
         </ul>
         <div style="position: relative;">
             <a class="nav-link dropdown-toggle fs-6" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i>You are logged in as:</i> {{ auth()->user()->name }}
+                 {{ auth()->user()->name }}
             </a>
-            <ul class="dropdown-menu" style="left: 70px; top: 50px;">
+            <ul class="dropdown-menu">
                 <li>
                     <form method="POST" action="{{ route('logout') }}">
                         {{ csrf_field() }}

@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('logs', function (Blueprint $table) {
+        Schema::create('t_v_shows', function (Blueprint $table) {
             $table->id();
-            $table->string('log_entry');
-            $table->string('type');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->string('title');
+            $table->string('genres');
+            $table->date('release_date');
+            $table->string('summary');
+            $table->string('tvshow_pic')->nullable();
             $table->timestamps();
         });
     }
@@ -25,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('logs');
+        Schema::dropIfExists('t_v_shows');
     }
 };

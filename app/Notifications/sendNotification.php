@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class TestEnrollment extends Notification
+class sendNotification extends Notification
 {
     use Queueable;
     private $data;

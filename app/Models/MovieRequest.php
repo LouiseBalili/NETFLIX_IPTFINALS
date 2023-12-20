@@ -5,18 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Log extends Model
+class MovieRequest extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'log_entry',
-        'type',
-        'user_id',
+        'title',
+        'year_released',
     ];
-
-    public function user()
-    {
-        return $this->belongsTo('App\Models\User');
-    }
 }

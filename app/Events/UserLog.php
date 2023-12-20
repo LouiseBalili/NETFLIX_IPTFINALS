@@ -17,10 +17,12 @@ class UserLog
     /**
      * Create a new event instance.
      */
-    public function __construct(public $log_entry)
+    public function __construct(public $log_entry,public $type)
     {
         $this->log_entry = $log_entry;
+        $this->type = $type;
     }
+
 
     /**
      * Get the channels the event should broadcast on.

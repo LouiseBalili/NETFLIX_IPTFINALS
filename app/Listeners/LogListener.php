@@ -24,6 +24,7 @@ class LogListener
     {
         Log::create([
             'log_entry' => $event->log_entry,
+            'type' => $event->type,
             'user_id' => auth()->user()->id
         ]);
     }
