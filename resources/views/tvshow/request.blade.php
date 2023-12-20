@@ -4,7 +4,7 @@
 <div class="container col-md-5 offset-md-3 mt-5">
     <h1 class="text-center">Request TV Show</h1>
 
-    <form action="{{'/tvshows'}}" method="POST">
+    <form action="{{'/tvshows/request'}}" method="POST">
         {{ csrf_field() }}
 
         <div class="form-group mb-3 mt-4">

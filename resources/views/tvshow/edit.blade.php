@@ -61,6 +61,7 @@
 
             <div class="flex-grow-1 d-flex justify-content-end mt-3">
                 <button class="btn btn-danger px-4 add-btn" type="submit">Save</button>
+    </form>
                 <form action="{{ url('/tvshows/delete/'.$tvshow->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
@@ -69,7 +70,6 @@
             </div>
         </div>
     </div>
-</form>
 @endsection
 
 <style scoped>

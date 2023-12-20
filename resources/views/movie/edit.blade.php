@@ -61,6 +61,7 @@
 
             <div class="flex-grow-1 d-flex justify-content-end mt-3">
                 <button class="btn btn-danger px-4 add-btn" type="submit">Save</button>
+    </form>
                 <form action="{{ url('/movies/delete/'.$movie->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
